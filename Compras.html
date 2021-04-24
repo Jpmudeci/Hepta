@@ -4,14 +4,16 @@
     <!--comentarios en html-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset="utf-8">
-    <title> mi primer sitio web</title>
+    <title>Compras</title>
     </haed>
     <style>
-         
+         #navbar{
+          background-color: cornflowerblue;
+        }
     </style>
     <body>
             <!--NAV-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
             <a class="navbar-brand" href="#">Hepta</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -20,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="implantacion.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#reg" data-toggle="modal"data-target="#reg">Registrate</a>
@@ -48,9 +50,12 @@
     <!--jumbo-->
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4">Compras</h1>
+              <h1 class="display-4 d-flex justify-content-center">Compras</h1>
               <p class="lead"></p>
             </div>
+          </div>
+          <div>
+            <a class="text-light btn btn-primary" href="" id="btn_agregar_compra">Agregar</a>
           </div>
 
 
