@@ -153,7 +153,13 @@
         
                           <br>
                           <div class="form-group">
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Url de foto">
+                            <label for="areas">Escoge tu área</label>
+                              <select class="form-control" name="areas" id="areas" aria-label="Default select example">
+                                <option style="display:none">Selecciona tu área</option>                                
+                                <option value="compras">Compras</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="almacen">Inventario</option>                                
+                              </select>
                           </div>
                       </form>
                       <button type="submit" form="registro" class="btn btn-secondary btn-success" data-dismiss="modal" >Registrarse</button>
