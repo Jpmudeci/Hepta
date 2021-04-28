@@ -11,12 +11,9 @@ router.get('/users/', (req, res) => {
 
 router.post('/users/', (req, res) => {
     let body = req.body;
-    console.log("b: " + JSON.stringify(body.correo));
+    console.log("b: " + JSON.stringify(body));
     let newU;
     if(body.nombre != null && body.apellidos != null && body.correo != null && body.pwd != null && body.area != null){
-        if(userCtrl.getUserByEmail(body.correo)){
-            res.status(400).send("Este usuario ya está registrado");
-        }
         newU = userCtrl.insertUser(body);
         if(newU){
             res.status(200).send("Éxito: " + newU);
