@@ -40,7 +40,6 @@ regForm.addEventListener('change',  () => {
     }        
 })
 
-
 regBtn.addEventListener('click', (e) => {
     e.preventDefault();
     console.log("hola");
