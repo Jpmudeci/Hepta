@@ -2,18 +2,14 @@ $("#nav1").click(() => {
     console.log("u clicked me");
 })
 
-$(document).ready(() => {
-    $("#bienvenida").append("Daniel");
-})
-
-$('#regNavBar').click(() => {
+/*$('#regNavBar').click(() => {
     axios.get('http://localhost:3000/api/users')
     .then(response => {
         const users = response.data;
         console.log("users: " + JSON.stringify(users));
     })
     .catch(err => {console.log(err)})
-})
+})*/
 
 let regBtn = document.getElementById('regBtn');
 regBtn.disabled = true;
@@ -62,4 +58,26 @@ regBtn.addEventListener('click', (e) => {
       }, (error) => {
         alert("Ocurrió un error: " + error);
       });
+})
+
+const populateAreaOptions = () => {
+    let areaOptions = document.getElementById('area');
+    let usrs = {};
+    axios.get('http://localhost:3000/api/users')
+    .then(response => {
+        usrs = response.data;
+        console.log(usrs.users.length);
+        for(let i = 0; i < usrs.users.length ; i++) {
+            console.log(usrs.users[i].nombre);
+            let newOption = document.createElement('option');
+            newOption.value = usrs.users[i].nombre;
+            newOption.innerHTML = usrs.users[i].nombre;
+            areaOptions.options.add(newOption);
+        }       
+    })
+    .catch(err => {console.log(err)})    
+}
+
+$(document).ready(() => {
+    populateAreaOptions();
 })
