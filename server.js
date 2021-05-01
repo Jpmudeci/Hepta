@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.procces || 3000; // PONEMOS EL PUERTO
 
 const purchaseRouter = require('./routes/purchaseRoutes');
+const saleRouter = require('./routes/salesRoutes');
+const inventoryRouter = require('./routes/inventoryRoutes');
 const userRouter = require('./routes/userRoutes');
 
 app.use('/api', purchaseRouter);
