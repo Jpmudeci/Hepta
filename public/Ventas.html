@@ -10,6 +10,10 @@
          #navbar{
           background-color: cornflowerblue;
         }
+        table,th,td{
+            border-style: solid;
+            border-color:darkslategrey;
+        }
     </style>
     <body>
             <!--NAV-->
@@ -50,11 +54,44 @@
     <!--jumbo-->
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4 d-flex justify-content-center">Compras</h1>
+              <h1 class="display-4 d-flex justify-content-center">Ventas</h1>
+              <h3 class="d-flex justify-content-center">-Lista de ventas-</h3>
+              <div class="d-flex justify-content-center">
+                  <table style="width: 100%;">
+                      <tr>
+                        <th>Numero de venta</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                      </tr>
+                      <tr>
+                        <td>0</td>
+                        <td>Cliente1</td>
+                        <td>Producto1</td>
+                        <td>0</td>
+                        <td>Fecha1</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Cliente2</td>
+                        <td>Producto2</td>
+                        <td>1</td>
+                        <td>Fecha2</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Cliente3</td>
+                        <td>Producto3</td>
+                        <td>2</td>
+                        <td>Fecha3</td>
+                      </tr>
+                  </table>
+              </div>
               <br>
               <div class="d-flex justify-content-end">
-                <a class="text-light btn btn-primary" href="" id="btn_agregar_compra">Agregar</a>
-              </div>
+                  <a class="text-light btn btn-primary" href="" id="btn_agregar_compra">Agregar</a>
+            </div>
             </div>
           </div>
 
